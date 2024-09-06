@@ -46,6 +46,7 @@ import org.springframework.context.annotation.Configuration;
 class DefaultFeignLoadBalancerConfiguration {
 
 	@Bean
+	@Data
 	@ConditionalOnMissingBean
 	@Conditional(OnRetryNotEnabledCondition.class)
 	public Client feignClient(LoadBalancerClient loadBalancerClient,
